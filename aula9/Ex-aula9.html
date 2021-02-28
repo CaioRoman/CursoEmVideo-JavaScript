@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aprendendo DOM</title>
+    </head>
+    <body>
+        <div id="aa">
+            <h1> aaaaaaaaa <strong>aaaaaaaaa</strong> aaaaaaaa</h1>
+
+            <p> paragrafo </p>
+        </div>
+        <script>
+
+            var h1 = window.document.getElementsByTagName('h1')[0]
+            h1.style.color ='red'
+
+            var p = window.document.getElementsByTagName('p')[0]
+            p.style.background ='green'
+
+            var aa = window.document.getElementById('aa')
+            aa.style.background ='black'
+
+        </script>
+    </body>
+</html>
