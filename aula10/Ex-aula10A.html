@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste</title>
+        <style>
+            #teste{
+                background-color: indigo;
+                color: black;
+                width: 300px;
+                height: 300px;
+                text-align: center;
+                line-height: 300px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="teste" onmouse>
+            click
+        </div>
+
+        <script>
+            var t = window.document.getElementById('teste')
+            t.addEventListener('click',clickar)
+            t.addEventListener('mouseenter',entra)
+            t.addEventListener('mouseout',sai)
+
+            function clickar() {
+                t.innerText = 'clickado'
+                t.style.background ='red'
+            }
+
+            function entra() {
+                t.innerText = 'entrou'
+            }
+
+            function sai() {
+                t.innerText = 'saiu'
+                t.style.background ='indigo'
+            }
+
+        </script>
+
+    </body>
+</html>
