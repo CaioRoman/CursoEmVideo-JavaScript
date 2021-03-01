@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multa</title>
+    </head>
+    <body>
+        <h1>Consulta de Multa</h1>
+
+        <p>Velocidade do veiculo</p>
+        <input type="number" name="txt1" id="txt1">
+        <input type="button" value="consulta" onclick="consulta()">
+
+        <div id="res"> 
+            Resultado
+        </div>
+
+        <script>
+
+
+            function consulta() {
+                var tn1 = window.document.getElementById('txt1')
+                var res = window.document.getElementById('res')
+                vel = Number(tn1.value)
+
+                res.innerHTML =`<p> A velocidade do carro é de ${vel}Km/h </p>`
+
+                if(vel>60){
+                    res.innerHTML += '<p> Você ultrapaçou o limite de velocidade: <strong> MULTADO </strong> </p>'
+                }
+                res.innerHTML += '<p> Dirija sempre usando cinto de segurança </p>'
+            }
+
+        </script>
+    </body>
+</html>
